@@ -1,7 +1,0 @@
-name: backend
-services:
-  - name: api
-    environment_slug: java
-    build_command: mvn clean package -DskipTests
-    run_command: java -jar target/*.jar
-    http_port: 8080
