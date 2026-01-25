@@ -47,7 +47,7 @@ public class CloudflareAiService {
                 + "Provide concise answers (under 100 words). "
                 + "Make your responses action-oriented with clear, practical steps. "
                 + "Focus on financial advice, budgeting, savings, and smart money management.\n\n"
-                + "User question: ";
+                + "User question:  ";
         
         String fullPrompt = systemPrompt + prompt;
         
