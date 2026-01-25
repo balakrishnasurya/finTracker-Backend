@@ -42,7 +42,16 @@ public class CloudflareAiService {
      * @return The AI-generated response
      */
     public String generateResponse(String prompt) {
-        return generateResponse(prompt, null, null, null);
+        // Add system prompt to guide the AI's behavior
+        String systemPrompt = "You are a professional finance guide helping users make better financial decisions. "
+                + "Provide concise answers (under 100 words). "
+                + "Make your responses action-oriented with clear, practical steps. "
+                + "Focus on financial advice, budgeting, savings, and smart money management.\n\n"
+                + "User question: ";
+        
+        String fullPrompt = systemPrompt + prompt;
+        
+        return generateResponse(fullPrompt, null, null, null);
     }
     
     /**
