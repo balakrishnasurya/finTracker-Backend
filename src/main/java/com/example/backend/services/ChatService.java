@@ -25,6 +25,7 @@ public class ChatService {
     private final ChatMessageRepository chatMessageRepository;
     private final ConversationMapper conversationMapper;
     private final ChatMessageMapper chatMessageMapper;
+    private final CloudflareAiService cloudflareAiService;
 
     public ConversationDto createConversation(CreateConversationDto createConversationDto) {
         Conversation conversation = conversationMapper.toConversation(createConversationDto);
@@ -45,8 +46,8 @@ public class ChatService {
         userMessage.setContent(sendMessageDto.getMessage());
         chatMessageRepository.save(userMessage);
 
-        // Simulate LLM response (in real implementation, call actual LLM API)
-        String assistantResponse = generateLLMResponse(sendMessageDto.getMessage());
+        // Generate AI response using Cloudflare AI
+        String assistantResponse = cloudflareAiService.generateResponse(sendMessageDto.getMessage());
 
         // Save assistant message
         ChatMessage assistantMessage = new ChatMessage();
@@ -66,12 +67,5 @@ public class ChatService {
 
         List<ChatMessage> messages = chatMessageRepository.findByConversationIdOrderByCreatedAtAsc(conversationId);
         return chatMessageMapper.toChatMessageDtos(messages);
-    }
-
-    private String generateLLMResponse(String userMessage) {
-        // Placeholder for LLM integration
-        // In production, this would call an actual LLM API (OpenAI, Claude, etc.)
-        return "This is a simulated response to: " + userMessage + 
-               ". In production, this would be replaced with actual LLM integration.";
     }
 }

@@ -27,7 +27,7 @@ public class ChatMessage {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "content", nullable = false)
+    @Column(name = "content", nullable = false, columnDefinition = "TEXT")
     private String content;
 
     @Column(name = "created_at")
