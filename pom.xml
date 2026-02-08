@@ -69,6 +69,12 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- 📧 Email Support -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!-- 🧪 Testing (JUnit, Mockito, MockMvc) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
