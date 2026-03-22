@@ -158,5 +158,5 @@ This allows old clients to keep working while new clients move to the new contra
 
 ## 4) Notes for Swagger UI
 
-- For CSV import endpoint, select `multipart/form-data` and upload a file in field `file`.
+- For import endpoint, select `multipart/form-data` and upload a `.csv`, `.xlsx`, or `.xls` file in field `file`.
 - If you still see JSON body for upload, refresh Swagger page and restart app once.
