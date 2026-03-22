@@ -1,5 +1,6 @@
 package com.example.backend.dtos;
 
+import com.example.backend.entities.TransactionDirection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,9 @@ public class TransactionDto {
     private LocalDate txnDate;
     private BigDecimal amount;
     private String merchant;
+    private String paymentType;
     private String transactionType;
+    private TransactionDirection transactionDirection;
     private Long categoryId;
     private String categoryName;
     private String notes;

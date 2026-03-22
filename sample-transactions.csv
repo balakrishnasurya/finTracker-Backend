@@ -1,0 +1,2 @@
+txnDate,amount,merchant,paymentType,transactionDirection,categoryName,notes
+2025-10-15,145.50,Krishna,EXPENSE,DEBIT,Groceries,Weekly grocery run

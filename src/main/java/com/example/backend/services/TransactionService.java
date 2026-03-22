@@ -11,6 +11,7 @@ import com.example.backend.mappers.TransactionMapper;
 import com.example.backend.repositories.CategoryRepository;
 import com.example.backend.repositories.SmsMessageRepository;
 import com.example.backend.repositories.TransactionRepository;
+import com.example.backend.utils.TransactionTypeResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
@@ -39,6 +40,15 @@ public class TransactionService {
 
     public TransactionDto createTransaction(CreateTransactionDto createTransactionDto) {
         Transaction transaction = transactionMapper.toTransaction(createTransactionDto);
+        String paymentType = TransactionTypeResolver.resolvePaymentType(
+            createTransactionDto.getPaymentType(),
+            createTransactionDto.getTransactionType()
+        );
+        transaction.setPaymentType(paymentType);
+        transaction.setTransactionType(TransactionTypeResolver.resolveDirection(
+            createTransactionDto.getTransactionDirection(),
+            paymentType
+        ));
 
         // Set SMS message if provided
         if (createTransactionDto.getSmsId() != null && createTransactionDto.getSmsId() > 0) {

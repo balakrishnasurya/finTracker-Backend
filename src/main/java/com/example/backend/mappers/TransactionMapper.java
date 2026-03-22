@@ -16,6 +16,9 @@ public interface TransactionMapper {
     @Mapping(source = "smsMessage.id", target = "smsId")
     @Mapping(source = "category.id", target = "categoryId")
     @Mapping(source = "category.name", target = "categoryName")
+    @Mapping(source = "paymentType", target = "paymentType")
+    @Mapping(source = "paymentType", target = "transactionType")
+    @Mapping(source = "transactionType", target = "transactionDirection")
     TransactionDto toTransactionDto(Transaction transaction);
 
     List<TransactionDto> toTransactionDtos(List<Transaction> transactions);
@@ -23,6 +26,9 @@ public interface TransactionMapper {
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "smsMessage", ignore = true)
     @Mapping(target = "category", ignore = true)
+    @Mapping(target = "paymentType", ignore = true)
+    @Mapping(target = "transactionType", ignore = true)
+    @Mapping(target = "notes", ignore = true)
     @Mapping(target = "isDeleted", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
@@ -33,6 +39,7 @@ public interface TransactionMapper {
     @Mapping(target = "txnDate", ignore = true)
     @Mapping(target = "amount", ignore = true)
     @Mapping(target = "merchant", ignore = true)
+    @Mapping(target = "paymentType", ignore = true)
     @Mapping(target = "transactionType", ignore = true)
     @Mapping(target = "category", ignore = true)
     @Mapping(target = "isDeleted", ignore = true)
