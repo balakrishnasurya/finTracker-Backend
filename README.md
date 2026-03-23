@@ -18,12 +18,8 @@ A comprehensive backend service for a personal and group finance tracking applic
 * **Cloudflare AI Integration:** Intelligent chatbot interface utilizing the powerful `llama-2-7b-chat-int8` model (via Cloudflare Workers AI) to provide financial advice and answer queries.
 * **Conversations:** Maintain chat history and multiple conversation contexts.
 
-### 📱 Automated Input
-* **SMS Integration:** Automatically parse and process SMS messages from banks to create transaction records instantly without manual data entry.
-
-### 📈 Habit & Fitness Tracking
-* **Gym Records:** Keep track of workout logs.
-* **Streaks:** Gamified feature to monitor and maintain daily habits or fitness streaks.
+### 📈 Habit Tracking
+* **Streaks:** Gamified feature to monitor and maintain daily habits  streaks.
 
 ## 🛠️ Tech Stack
 * **Java** 17+
