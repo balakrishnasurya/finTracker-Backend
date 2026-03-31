@@ -22,6 +22,7 @@ public class AlertController {
     public ResponseEntity<String> sendAlert(@RequestBody AlertRequest request) {
         emailService.sendAlert(
             request.getAmount(),
+            request.getCurrentTotalAmount(),
             request.getEmail()
         );
 
