@@ -1,0 +1,11 @@
+txnDate,amount,merchant,paymentType,transactionDirection,categoryName,notes
+2025-11-01,75.00,Local Cafe,DEBIT,DEBIT,Food,Breakfast and coffee
+2025-11-02,3200.00,Acme Corp,CREDIT,CREDIT,Salary,Monthly salary credit
+2025-11-03,450.25,Supermart,DEBIT,DEBIT,Groceries,Weekly essentials
+2025-11-04,199.00,Netflix,DEBIT,DEBIT,Entertainment,Monthly subscription
+2025-11-05,1500.00,Freelance Client,CREDIT,CREDIT,Freelance,Logo design payment
+2025-11-06,89.50,City Bus Card,DEBIT,DEBIT,Transport,Bus pass recharge
+2025-11-07,620.00,Pharmacy Plus,DEBIT,DEBIT,Healthcare,Medicines purchase
+2025-11-08,999.99,Online Store,DEBIT,DEBIT,Shopping,Headphones order
+2025-11-09,210.00,Fuel Station,DEBIT,DEBIT,Transport,Fuel top-up
+2025-11-10,300.00,Book Hub,DEBIT,DEBIT,Education,Exam prep books
